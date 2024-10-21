@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Menu Example</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Button styling */
+        .toggle-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Menu styling */
+        .menu {
+            display: none;
+            background-color: #007bff;
+            color: white;
+            width: 200px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="toggle-btn" onclick="toggleMenu()">Toggle Menu</button>
+
+    <div class="menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        // JavaScript to toggle the menu
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
